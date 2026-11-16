@@ -1,21 +1,439 @@
-<header style="display: flex; align-items: center; gap: 20px;">
-    <!-- আপনার প্রফেশনাল ছবি -->
-    <img src="profile.jpg" alt="Anik Paul" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color);">
-    
-    <div style="flex-grow: 1; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px;">
-        <div class="header-left">
-            <h1>ANIK PAUL</h1>
-            <div class="location">Dhaka, Bangladesh</div>
-        </div>
-        <div class="header-right">
-            <div class="social-links">
-                <a href="https://linkedin.com/in/anik-paul" target="_blank">LinkedIn</a>
-                <span>|</span>
-                <a href="https://github.com/anik-paul" target="_blank">GitHub</a>
-            </div>
-            <div class="contact-info">
-                +880 1743-313837 &nbsp;|&nbsp; <a href="mailto:anikpau9869@gmail.com">anikpau9869@gmail.com</a>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anik Paul | EEE & Technical Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --accent-color: #2b6cb0;
+            --text-dark: #1a202c;
+            --text-muted: #4a5568;
+            --border-color: #cbd5e0;
+            --bg-page: #f7fafc;
+            --bg-paper: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.55;
+            font-size: 14.5px;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--bg-paper);
+            padding: 45px 55px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border-radius: 4px;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        /* Header Section - Matching Reference PDF */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 22px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .header-left h1 {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 0.4px;
+            margin-bottom: 3px;
+        }
+
+        .header-left .location {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 13.5px;
+        }
+
+        .social-links {
+            margin-bottom: 4px;
+        }
+
+        .social-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links span {
+            color: var(--text-muted);
+            margin: 0 6px;
+        }
+
+        .contact-info {
+            color: var(--text-dark);
+        }
+
+        .contact-info a {
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2.section-title {
+            font-size: 15.5px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            border-bottom: 1.5px solid var(--primary-color);
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .objective-text {
+            text-align: justify;
+            color: var(--text-dark);
+        }
+
+        /* Entry Items (Education, Projects, Experience) */
+        .entry {
+            margin-bottom: 12px;
+        }
+
+        .entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .entry-title {
+            font-weight: 700;
+            font-size: 14.5px;
+            color: var(--text-dark);
+        }
+
+        .entry-subtitle {
+            font-weight: 500;
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 13.8px;
+        }
+
+        .entry-date-loc {
+            text-align: right;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .entry-sub-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+            flex-wrap: wrap;
+        }
+
+        .entry-loc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        ul.bullets {
+            margin-left: 18px;
+            margin-top: 4px;
+        }
+
+        ul.bullets li {
+            margin-bottom: 4px;
+            text-align: justify;
+        }
+
+        /* Skills Grid */
+        .skills-list p {
+            margin-bottom: 5px;
+        }
+
+        .skills-list strong {
+            color: var(--primary-color);
+        }
+
+        /* References & Footer Actions */
+        .ref-box {
+            font-size: 14px;
+        }
+
+        .print-bar {
+            max-width: 850px;
+            margin: 0 auto 15px auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-print {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-print:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Print Media Query for Clean PDF Export */
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+                font-size: 12.5px;
+            }
+            .container {
+                box-shadow: none;
+                border-top: none;
+                padding: 10px 15px;
+                max-width: 100%;
+            }
+            .print-bar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                padding: 25px 20px;
+            }
+            .header-right, .entry-date-loc {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="print-bar">
+        <button class="btn-print" onclick="window.print()">Download / Print as PDF</button>
     </div>
-</header>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <h1>ANIK PAUL</h1>
+                <div class="location">Dhaka, Bangladesh</div>
+            </div>
+            <div class="header-right">
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/anik-paul" target="_blank">LinkedIn</a>
+                    <span>|</span>
+                    <a href="https://github.com/anik-paul" target="_blank">GitHub</a>
+                </div>
+                <div class="contact-info">
+                    +880 1743-313837 &nbsp;|&nbsp; <a href="mailto:anikpau9869@gmail.com">anikpau9869@gmail.com</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Technical Focus & Objective -->
+        <section>
+            <h2 class="section-title">Technical Focus & Objective</h2>
+            <p class="objective-text">
+                Detail-oriented Electrical and Electronic Engineering (EEE) undergraduate at American International University-Bangladesh (AIUB) with strong hands-on proficiency in AutoCAD (2D &amp; 3D layout modeling), electrical conduit &amp; circuit design, and HVAC engineering fundamentals. Passionate about bridging core electrical engineering principles with technical solutions, system design, and engineering project execution.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2 class="section-title">Education</h2>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">American International University-Bangladesh (AIUB)</span>
+                    <span class="entry-date-loc">Expected 2028</span>
+                </div>
+                <div class="entry-sub-row">
+                    <span class="entry-subtitle">B.Sc. in Electrical and Electronic Engineering (EEE)</span>
+                    <span class="entry-loc">Dhaka, Bangladesh</span>
+                </div>
+                <ul class="bullets">
+                    <li><strong>Relevant Coursework:</strong> Electrical Circuit Analysis, AutoCAD (2D &amp; 3D Layout Modeling), Power Systems &amp; Substations, Control Systems, Digital Logic Design, HVAC Systems Fundamentals, Energy Conversion, Technical Report Writing, and Electrical Engineering Laboratory.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Govt. Azizul Haque College, Bogura</span>
+                    <span class="entry-date-loc">2024</span>
+                </div>
+                <div class="entry-sub-row">
+                    <span class="entry-subtitle">Higher Secondary Certificate (HSC) — GPA: 5.00/5.00</span>
+                    <span class="entry-loc">Bogura, Bangladesh</span>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Bogura Zilla School</span>
+                    <span class="entry-date-loc">2022</span>
+                </div>
+                <div class="entry-sub-row">
+                    <span class="entry-subtitle">Secondary School Certificate (SSC) — GPA: 5.00/5.00</span>
+                    <span class="entry-loc">Bogura, Bangladesh</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Projects -->
+        <section>
+            <h2 class="section-title">Engineering &amp; CAD Projects</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Electrical Conduit &amp; Building Layout Design | AutoCAD 2D &amp; 3D</span>
+                    <span class="entry-date-loc">Academic &amp; Practical Project</span>
+                </div>
+                <ul class="bullets">
+                    <li>Designed comprehensive 2D and 3D electrical layout configurations, load distribution paths, and conduit routing diagrams for multi-story residential and commercial structures using AutoCAD.</li>
+                    <li>Prepared standardized technical drafting sheets, circuit symbols, and spatial layouts adhering to engineering safety and installation guidelines.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">HVAC &amp; Central Air Conditioning Technical Layout Modeling | AutoCAD</span>
+                    <span class="entry-date-loc">Technical Drafting Project</span>
+                </div>
+                <ul class="bullets">
+                    <li>Developed 2D schematic layouts and equipment placement plans for central HVAC ducting and air conditioning systems tailored to commercial floor plans.</li>
+                    <li>Analyzed technical specifications, spatial constraints, and cooling load requirements to prepare clear engineering documentation.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Circuit Simulation &amp; Digital Logic Prototyping | MATLAB &amp; Lab Tools</span>
+                    <span class="entry-date-loc">Coursework Lab Project</span>
+                </div>
+                <ul class="bullets">
+                    <li>Simulated and analyzed AC/DC electrical circuits, power systems behavior, and digital logic gate configurations using MATLAB and circuit simulation tools.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Engineering Exposure & Experience -->
+        <section>
+            <h2 class="section-title">Engineering &amp; Technical Exposure</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Engineering &amp; Technical Solutions Development</span>
+                    <span class="entry-date-loc">Academic &amp; Field Exposure</span>
+                </div>
+                <ul class="bullets">
+                    <li>Built a strong foundation in electrical systems design, circuit analysis, and technical drafting using AutoCAD (2D &amp; 3D modeling).</li>
+                    <li>Analyzed complex technical specifications and client requirements to draft detailed engineering reports and deliver clear technical presentations.</li>
+                    <li>Gained hands-on exposure to market research, technical need identification, and proposing customized HVAC and electrical solutions for corporate environments.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Courses & Training -->
+        <section>
+            <h2 class="section-title">Courses &amp; Technical Training</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">AutoCAD 2D &amp; 3D Engineering Drafting &amp; Modeling</span>
+                    <span class="entry-date-loc">Completed</span>
+                </div>
+                <div class="entry-sub-row">
+                    <span class="entry-subtitle">Specialized Training in Electrical Layout, Blueprint Reading &amp; 3D CAD Modeling</span>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">IEEE AIUB Student Branch — Volunteer &amp; Technical Activities</span>
+                    <span class="entry-date-loc">Active Member</span>
+                </div>
+                <div class="entry-sub-row">
+                    <span class="entry-subtitle">Participated in technical workshops, engineering seminars, and student branch event coordination</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-list">
+                <p><strong>CAD &amp; Simulation Tools:</strong> AutoCAD (2D &amp; 3D Drafting/Modeling), MATLAB, Circuit Simulation Tools</p>
+                <p><strong>Core EEE &amp; HVAC Expertise:</strong> Electrical Layout &amp; Conduit Design, Circuit Analysis, Power Systems Fundamentals, HVAC &amp; Central Air Conditioning Systems, Technical Specification Analysis</p>
+                <p><strong>Programming &amp; Documentation:</strong> C Programming, MS Office Suite (Word, Excel, PowerPoint), Technical Report Writing, Data Analytics</p>
+                <p><strong>Professional &amp; Analytical Skills:</strong> Technical Presentation, Market Research, Client Requirement Analysis, Field Operations &amp; Team Coordination</p>
+            </div>
+        </section>
+
+        <!-- Extra-Curricular & Languages -->
+        <section>
+            <h2 class="section-title">Leadership, Cultural Interests &amp; Languages</h2>
+            <ul class="bullets">
+                <li><strong>Musical Performance:</strong> Accomplished Tabla player with expertise in classical and contemporary rhythm patterns, performing at university and cultural events.</li>
+                <li><strong>Event Organization:</strong> Active organizer for cultural programs, music performances, and academic events, demonstrating teamwork and leadership.</li>
+                <li><strong>Languages:</strong> Bangla (Native), English (Fluent — Professional &amp; Technical Communication).</li>
+            </ul>
+        </section>
+
+        <!-- Reference -->
+        <section>
+            <h2 class="section-title">Reference</h2>
+            <div class="ref-box">
+                <strong>Dr. Md. Saniat Rahman Zishan</strong><br>
+                Director, Faculty of Engineering, American International University-Bangladesh (AIUB)<br>
+                Email: <a href="mailto:saniat@aiub.edu" style="color: var(--accent-color); text-decoration: none;">saniat@aiub.edu</a>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
