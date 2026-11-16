@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anik Paul – Electrical & Electronic Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f4f3;--panel:#fff;--ink:#0d1f2d;--muted:#52636f;--line:#d5dcdf;--cu:#c2571a;--teal:#0f766e;--chip:#e6efed}
+@media (prefers-color-scheme:dark){:root{--bg:#0b141c;--panel:#122029;--ink:#e8eef0;--muted:#9bacb5;--line:#24363f;--cu:#f08a4b;--teal:#4cc2b5;--chip:#173038}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',Inter,sans-serif;line-height:1.15}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cu);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:300px 1fr;gap:56px}
+aside{position:sticky;top:0;align-self:start;padding:48px 0;height:100vh;overflow:auto}
+.photo{position:relative;width:200px;height:240px;border-radius:100px 100px 16px 16px;background:var(--chip);border:3px solid var(--cu);overflow:hidden;cursor:pointer;display:block}
+.photo img{width:100%;height:100%;object-fit:cover;display:none}
+.photo.has img{display:block}
+.photo .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-size:14px;padding:16px;gap:6px}
+.photo.has .ph{display:none}
+.photo .ph b{font-size:34px;color:var(--teal);font-family:'Bricolage Grotesque'}
+.photo:hover .chg{opacity:1}
+.chg{position:absolute;bottom:0;left:0;right:0;background:rgba(13,31,45,.8);color:#fff;font-size:13px;text-align:center;padding:8px;opacity:0;transition:.2s}
+.photo.has .chg{opacity:1}
+#file{position:absolute;opacity:0;pointer-events:none}
+.rm{background:none;border:0;color:var(--muted);font:inherit;font-size:13px;text-decoration:underline;cursor:pointer;margin-top:8px;display:none}
+.photo-wrap.has .rm{display:inline}
+aside h1{font-size:30px;margin:24px 0 4px}
+aside .role{color:var(--teal);font-weight:500}
+nav{margin:28px 0;display:flex;flex-direction:column;gap:4px;border-left:2px solid var(--line)}
+nav a{text-decoration:none;color:var(--muted);padding:4px 16px;margin-left:-2px;border-left:2px solid transparent}
+nav a:hover,nav a.on{color:var(--ink);border-color:var(--cu)}
+.contact{font-size:14px;color:var(--muted);display:grid;gap:6px;word-break:break-word}
+.contact a{text-decoration:none}.contact a:hover{color:var(--cu)}
+main{padding:48px 0 80px}
+.hero{padding-bottom:48px;border-bottom:1px solid var(--line)}
+.hero h2{font-size:clamp(34px,5vw,58px);font-weight:800;letter-spacing:-.02em}
+.hero p{margin-top:20px;font-size:18px;color:var(--muted);max-width:62ch}
+.btns{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:500;border:2px solid var(--cu)}
+.btn.p{background:var(--cu);color:#fff}.btn.p:hover{filter:brightness(1.1)}
+.btn.s:hover{background:var(--cu);color:#fff}
+section{padding:48px 0;border-bottom:1px solid var(--line)}
+section>h2{font-size:28px;margin-bottom:24px}
+.tl{border-left:2px solid var(--cu);margin-left:6px;display:grid;gap:28px}
+.tl article{position:relative;padding-left:28px}
+.tl article::before{content:"";position:absolute;left:-8px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--cu)}
+.tl h3{font-size:19px}
+.tl .meta{color:var(--teal);font-size:14px;font-weight:500}
+.tl ul{margin:10px 0 0 18px;color:var(--muted)}
+.tl li{margin-bottom:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:17px;margin-bottom:12px;color:var(--teal)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--chip);border-radius:8px;padding:4px 10px;font-size:14px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.lang{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line)}
+.lang:last-child{border:0}
+footer{padding-top:32px;color:var(--muted);font-size:14px}
+@media (max-width:860px){
+ .wrap{grid-template-columns:1fr;gap:0}
+ aside{position:static;height:auto;padding:32px 0 0;display:grid;justify-items:start}
+ nav{flex-direction:row;flex-wrap:wrap;border:0;gap:8px 16px;margin:20px 0}
+ nav a{padding:2px 0;border:0;margin:0;border-bottom:2px solid transparent}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside>
+  <div class="photo-wrap" id="pw">
+    <label class="photo" id="photo" title="Click to upload your photo">
+      <img id="img" alt="Photo of Anik Paul">
+      <div class="ph"><b>AP</b><span>Click to upload your photo</span></div>
+      <span class="chg">Change photo</span>
+      <input type="file" id="file" accept="image/*">
+    </label>
+    <button class="rm" id="rm" type="button">Remove photo</button>
+  </div>
+  <h1>Anik Paul</h1>
+  <p class="role">Electrical &amp; Electronic Engineer</p>
+  <nav id="nav">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#activities">Activities</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="contact">
+    <span>Dhaka, Bangladesh</span>
+    <a href="tel:+8801743313837">+880 1743313837</a>
+    <a href="mailto:anikpaul869@gmail.com">anikpaul869@gmail.com</a>
+    <a href="https://linkedin.com/in/anik-paul" target="_blank" rel="noopener">linkedin.com/in/anik-paul</a>
+  </div>
+</aside>
+
+<main>
+  <div class="hero" id="about">
+    <h2>I turn electrical design and technical know-how into sales that clients trust.</h2>
+    <p>I am a B.Sc. graduate in Electrical and Electronic Engineering from American International University-Bangladesh (AIUB). I combine hands-on AutoCAD drafting with HVAC and electrical systems knowledge, and I explain technical solutions clearly to corporate clients.</p>
+    <div class="btns">
+      <a class="btn p" href="mailto:anikpaul869@gmail.com">Email me</a>
+      <a class="btn s" href="#experience">See my experience</a>
+    </div>
+  </div>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="tl">
+      <article>
+        <h3>Engineering &amp; Technical Sales Development</h3>
+        <div class="meta">Technical sales · HVAC · Electrical design</div>
+        <ul>
+          <li>Built a solid base in electrical system design, circuit analysis and technical layout drafting using AutoCAD (2D &amp; 3D modeling).</li>
+          <li>Analyzed complex technical specifications and client requirements to produce detailed engineering reports and clear corporate presentations.</li>
+          <li>Gained hands-on experience in market research, client need identification and customized HVAC solutions for corporate clients.</li>
+          <li>Worked under target pressure, made frequent field visits, and supported corporate sales and marketing teams across Bangladesh.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="tl">
+      <article>
+        <h3>B.Sc. in Electrical and Electronic Engineering</h3>
+        <div class="meta">American International University-Bangladesh (AIUB)</div>
+        <ul><li>Coursework: Electrical Circuit Analysis, AutoCAD, Power Systems &amp; Substations, Control Systems, Technical Report Writing, Engineering Laboratories.</li></ul>
+      </article>
+      <article>
+        <h3>Higher Secondary Certificate (HSC)</h3>
+        <div class="meta">Govt. Azizul Haque College, Bogura</div>
+      </article>
+      <article>
+        <h3>Secondary School Certificate (SSC)</h3>
+        <div class="meta">Bogura Zilla School, Bogura</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><h3>Engineering &amp; CAD</h3><div class="chips"><span>AutoCAD 2D</span><span>AutoCAD 3D</span><span>MATLAB</span><span>Circuit simulation tools</span></div></div>
+      <div class="card"><h3>Technical &amp; HVAC</h3><div class="chips"><span>Electrical layout design</span><span>HVAC systems</span><span>Central air conditioning</span><span>Specification analysis</span></div></div>
+      <div class="card"><h3>Sales &amp; Business</h3><div class="chips"><span>B2B technical sales</span><span>Client need analysis</span><span>Negotiation</span><span>Lead generation</span><span>Relationship management</span></div></div>
+      <div class="card"><h3>Reporting &amp; IT</h3><div class="chips"><span>MS Word</span><span>Excel</span><span>PowerPoint</span><span>Sales reporting</span><span>Technical report writing</span></div></div>
+      <div class="card"><h3>Professional strengths</h3><div class="chips"><span>Corporate presentations</span><span>Market research</span><span>Target-driven</span><span>Field visits</span></div></div>
+    </div>
+  </section>
+
+  <section id="activities">
+    <h2>Activities &amp; Languages</h2>
+    <div class="two">
+      <div class="card"><h3>Tabla accompanist</h3><p>Skilled tabla player with experience in classical and contemporary rhythm patterns, including accompanying live musical performances.</p></div>
+      <div class="card"><h3>Team leadership &amp; events</h3><p>Active in organizing cultural programs, music performances and academic events. This built my teamwork, discipline and creative thinking.</p></div>
+      <div class="card"><h3>Languages</h3>
+        <div class="lang"><span>Bangla</span><span>Native</span></div>
+        <div class="lang"><span>English</span><span>Fluent (professional &amp; technical)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="border:0">
+    <h2>Let's talk</h2>
+    <p style="color:var(--muted);max-width:56ch">I'm open to Sales Engineer, HVAC and electrical engineering roles in Bangladesh. The fastest way to reach me is email.</p>
+    <div class="btns">
+      <a class="btn p" href="mailto:anikpaul869@gmail.com">anikpaul869@gmail.com</a>
+      <a class="btn s" href="tel:+8801743313837">Call +880 1743313837</a>
+      <a class="btn s" href="https://linkedin.com/in/anik-paul" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+  <footer>© <span id="yr"></span> Anik Paul · Dhaka, Bangladesh</footer>
+</main>
+</div>
+
+<script>
+const photo=document.getElementById('photo'),img=document.getElementById('img'),pw=document.getElementById('pw'),file=document.getElementById('file');
+function show(src){img.src=src;photo.classList.add('has');pw.classList.add('has')}
+try{const s=localStorage.getItem('ap_photo');if(s)show(s)}catch(e){}
+file.addEventListener('change',()=>{
+  const f=file.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=()=>{
+    const im=new Image();
+    im.onload=()=>{
+      const m=600,k=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement('canvas');
+      c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);
+      const d=c.toDataURL('image/jpeg',.85);show(d);
+      try{localStorage.setItem('ap_photo',d)}catch(e){}
+    };
+    im.src=r.result;
+  };
+  r.readAsDataURL(f);
+});
+document.getElementById('rm').addEventListener('click',()=>{
+  img.removeAttribute('src');photo.classList.remove('has');pw.classList.remove('has');file.value='';
+  try{localStorage.removeItem('ap_photo')}catch(e){}
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+const links=[...document.querySelectorAll('#nav a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('main [id]').forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
